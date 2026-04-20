@@ -6,7 +6,7 @@ const GranthVed = () => {
     const scrollTextRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const canvas = document.getElementById("canvas") as HTMLCanvasElement;
         if (!canvas) return;
 
         const ctx = canvas.getContext("2d");
@@ -17,14 +17,43 @@ const GranthVed = () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
+        // class Particle {
+        //     x: number;
+        //     y: number;
+        //     size: number;
+        //     speedY: number;
+        //     color: string;
+
+        //     constructor() {
+        //         this.x = Math.random() * canvas.width;
+        //         this.y = Math.random() * canvas.height;
+        //         this.size = Math.random() * 2 + 0.1;
+        //         this.speedY = Math.random() * 1 + 0.2;
+        //         this.color = `rgba(212,175,55,${Math.random()})`;
+        //     }
+
+        //     update() {
+        //         this.y -= this.speedY;
+        //         if (this.y < 0) this.y = canvas.height;
+        //     }
+
+        //     draw() {
+        //         ctx.fillStyle = this.color;
+        //         ctx.beginPath();
+        //         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        //         ctx.fill();
+        //     }
+        // }
         class Particle {
             x: number;
             y: number;
             size: number;
             speedY: number;
             color: string;
+            ctx: CanvasRenderingContext2D;
 
-            constructor() {
+            constructor(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
+                this.ctx = ctx;
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 2 + 0.1;
@@ -32,30 +61,30 @@ const GranthVed = () => {
                 this.color = `rgba(212,175,55,${Math.random()})`;
             }
 
-            update() {
+            update(canvas: HTMLCanvasElement) {
                 this.y -= this.speedY;
                 if (this.y < 0) this.y = canvas.height;
             }
 
             draw() {
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
+                this.ctx.fillStyle = this.color;
+                this.ctx.beginPath();
+                this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                this.ctx.fill();
             }
         }
 
         const init = () => {
             particlesArray = [];
             for (let i = 0; i < 100; i++) {
-                particlesArray.push(new Particle());
+                particlesArray.push(new Particle(ctx, canvas));
             }
         };
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particlesArray.forEach((p) => {
-                p.update();
+                p.update(canvas);
                 p.draw();
             });
             requestAnimationFrame(animate);
