@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,28 +12,9 @@ import {
     FaInstagram,
     FaYoutube,
     FaWhatsapp,
-    FaArrowUp
 } from "react-icons/fa";
 
 export default function Home() {
-    // states
-    const [showTopBtn, setShowTopBtn] = useState(false);
-
-    // handle scroll
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 200) {
-                setShowTopBtn(true);
-            } else {
-                setShowTopBtn(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -268,15 +249,6 @@ export default function Home() {
                     <FaWhatsapp className="text-white text-xl" />
                 </a>
 
-                {/* Top Button */}
-                {showTopBtn && (
-                    <button
-                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                        className="fixed bottom-6 left-6 bg-linear-to-r from-orange-500 to-pink-500 text-white p-3 rounded-full shadow-lg"
-                    >
-                        <FaArrowUp />
-                    </button>
-                )}
             </footer>
         </div>
     );
