@@ -140,7 +140,7 @@ const GranthVed = () => {
             <div className="relative z-10 max-w-7xl mx-auto px-5 overflow-hidden">
 
                 {/* HERO */}
-                <section className="min-h-screen flex flex-col justify-center items-center text-center px-4">
+                <section className="min-h-80 flex flex-col justify-center items-center text-center px-4">
 
                     <p
                         data-aos="fade-down"
@@ -164,25 +164,24 @@ const GranthVed = () => {
                     >
                         १ मे २०२६ | भव्य प्रकाशन
                     </p>
-
                 </section>
 
                 {/* BOOK */}
-                <section className="flex flex-wrap items-center justify-around gap-12 my-24">
+                <section className="flex flex-wrap items-center justify-around gap-12 my-10">
                     <div data-aos="fade-right" className="relative w-[320px] h-112.5 rounded-xl border border-[#D4AF37]/30 bg-white/5 overflow-hidden">
                         <div className="absolute inset-0 bg-[conic-gradient(transparent,#D4AF37,transparent)] animate-spin-slow"></div>
 
-                        <div className="absolute inset-1 bg-black rounded-xl flex flex-col items-center justify-center">
+                        <div className="absolute bg-white inset-1 rounded-xl flex flex-col items-center justify-center">
                             <img src={PosterImage} alt="Book" className="w-[80%]" />
-                            <div className="text-center p-3 text-sm">
-                                भक्ती मार्गाचा <br /> आधुनिक वारसा
+                            <div className="text-black p-3 text-sm">
+                                भक्ती मार्गाचा आधुनिक वारसा
                             </div>
                         </div>
                     </div>
 
                     <div data-aos="fade-left" className="flex-1 min-w-70">
                         <h2 className="text-3xl text-[#D4AF37]">
-                            पवित्र ग्रंथ प्री-बुकिंग
+                            प्री-बुकिंग
                         </h2>
 
                         <p className="my-5 text-gray-300 leading-relaxed text-lg">
@@ -193,7 +192,7 @@ const GranthVed = () => {
                 </section>
 
                 {/* STORY */}
-                <section className="my-32 relative">
+                <section className="my-18 relative">
 
                     {/* Soft Background Glow */}
                     <div

@@ -64,7 +64,7 @@ function Footer() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg animate-bounce"
+                    className="z-999 cursor-pointer fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg animate-bounce"
                 >
                     <FaWhatsapp className="text-white text-xl" />
                 </a>
