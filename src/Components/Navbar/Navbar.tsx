@@ -69,7 +69,7 @@ export default function Navbar() {
                             }`
                         }
                     >
-                        घर
+                        मुखपृष्ठ
                     </NavLink>
 
                     <NavLink

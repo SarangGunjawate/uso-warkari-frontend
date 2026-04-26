@@ -55,7 +55,7 @@ function Footer() {
                     </div>
 
                     <p className="text-sm text-gray-500">
-                        © २०२५ युएसओ वारकरी • सर्व हक्क राखीव
+                        © {new Date().getFullYear()} युएसओ वारकरी • सर्व हक्क राखीव
                     </p>
                 </div>
 
