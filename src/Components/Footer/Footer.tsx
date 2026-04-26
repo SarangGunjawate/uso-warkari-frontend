@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
-    const phone = "919881186171";
+    const phone = "919309210491";
 
     const message = `नमस्कार, 
 मला "माऊलींच्या गोष्टी" हे पुस्तक प्री-बुक करायचे आहे.  
@@ -40,7 +40,7 @@ function Footer() {
 
                     <div className="flex justify-center gap-8 mb-10">
 
-                        <a data-aos="zoom-in" data-aos-delay="300" className="cursor-pointer p-4 rounded-full bg-white/10 hover:bg-blue-600 transition">
+                        <a target="_blank" href="https://www.facebook.com/share/1CkddJWSgc/?mibextid=wwXIfr" data-aos="zoom-in" data-aos-delay="300" className="cursor-pointer p-4 rounded-full bg-white/10 hover:bg-blue-600 transition">
                             <FaFacebookF />
                         </a>
 
