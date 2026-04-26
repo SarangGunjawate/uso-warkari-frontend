@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+/* @keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.animate-zoom {
+  animation: zoomEffect 6s ease-in-out forwards;
+} */
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.2) translate(-20px, -20px);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 6s ease-in-out forwards;
+}

@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -6,11 +7,29 @@ import Poster from "../../assets/Images/poster-img.jpeg";
 import Img1 from "../../assets/Images/img1.jpeg";
 import Img2 from "../../assets/Images/img2.jpeg";
 import Img3 from "../../assets/Images/img3.jpeg";
-import VitthalImg from "../../assets/Images/vitthal-img.jpg";
-import VitthalImg1 from "../../assets/Images/vitthal-img-1.jpg";
+import EventImage1 from "../../assets/Images/event-img1.jpeg";
+import EventImage2 from "../../assets/Images/event-img2.jpeg";
+import EventImage3 from "../../assets/Images/event-img3.jpeg";
+import EventImage4 from "../../assets/Images/event-img4.jpeg";
+import EventImage5 from "../../assets/Images/event-img5.jpeg";
+import EventImage6 from "../../assets/Images/event-img6.jpeg";
+import EventImage7 from "../../assets/Images/event-img7.jpeg";
+import EventImage8 from "../../assets/Images/event-img8.jpeg";
 import PageMeta from "../PageMeta";
 
 export default function Home() {
+    const images = [EventImage1, EventImage2, EventImage3, EventImage4, EventImage5, EventImage6, EventImage7, EventImage8];
+
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length);
+        }, 4000); // change every 4 sec
+
+        return () => clearInterval(interval);
+    }, [images])
+
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -27,9 +46,8 @@ export default function Home() {
             />
 
             {/* ================= HERO ================= */}
-            <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden pt-20">
+            {/* <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden pt-20">
 
-                {/* Background */}
                 <picture>
                     <source media="(max-width: 768px)" srcSet={VitthalImg1} />
                     <img
@@ -39,6 +57,38 @@ export default function Home() {
                     />
                 </picture>
 
+                <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/50 to-black/80"></div>
+
+                <div className="relative z-10 max-w-3xl">
+                    <h1
+                        data-aos="zoom-in"
+                        className="text-4xl md:text-7xl font-bold text-white leading-tight drop-shadow-xl"
+                    >
+                        युएसओ वारकरी
+                    </h1>
+
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        className="mt-4 text-lg md:text-2xl text-gray-200"
+                    >
+                        श्री विठ्ठल भक्ती
+                    </p>
+                </div>
+
+            </section> */}
+
+            <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden pt-20">
+
+                {/* Slider Images */}
+                {images.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt="Vitthal"
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === current ? "opacity-100 animate-kenburns" : "opacity-0"
+                            }`} />
+                ))}
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/50 to-black/80"></div>
 
@@ -58,15 +108,6 @@ export default function Home() {
                     >
                         श्री विठ्ठल भक्ती
                     </p>
-
-                    {/* CTA Button */}
-                    {/* <button
-                        data-aos="fade-up"
-                        data-aos-delay="400"
-                        className="mt-8 px-8 py-3 bg-linear-to-r from-orange-400 to-yellow-500 text-white rounded-full shadow-lg hover:scale-105 transition"
-                    >
-                        सहभागी व्हा →
-                    </button> */}
                 </div>
 
             </section>
