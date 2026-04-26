@@ -78,7 +78,7 @@ export default function Home() {
             >
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-6 text-gray-800">
-                        गुरुकुल वारकरी
+                        वारकरी गुरुकुलम्
                     </h2>
 
                     <p className="text-gray-600 text-justify leading-8 text-lg border-l-4 border-orange-400 pl-4">
