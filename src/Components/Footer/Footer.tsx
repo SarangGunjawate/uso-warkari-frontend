@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
-    const phone = "919881186171";
+    const phone = "919309210491";
 
     const message = `नमस्कार, 
 मला "माऊलींच्या गोष्टी" हे पुस्तक प्री-बुक करायचे आहे.  
