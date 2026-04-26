@@ -117,8 +117,40 @@ export default function Home() {
 
             {/* ================= ABOUT ================= */}
             <section
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                className="py-16 px-6 bg-white overflow-hidden"
+            >
+                <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-10">
+
+                    {/* Heading */}
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                        भव्य प्रकाशन सोहळा
+                    </h2>
+
+                    {/* Text */}
+                    <p className="text-gray-600 text-lg leading-8 border-l-4 text-justify border-orange-400 pl-5 max-w-3xl">
+                        आपल्या मुला-मुलींना आपल्या समृद्ध संस्कृतीची आणि ज्ञानेश्वर माऊलींच्या विचारांची ओळख करून देणारे नवीन पुस्तक लवकरच आपल्या साठी उपलब्ध होत आहे.  अधिक माहितीसाठी खाली दिलेल्या फोटो वर क्लिक करा
+                    </p>
+
+                    {/* Image Wrapper */}
+                    <div className="relative w-full max-w-md overflow-hidden rounded-2xl">
+                        <img
+                            src={Poster}
+                            alt="poster"
+                            className="w-full h-full animate-zoom"
+                        />
+
+                        {/* Optional Overlay Glow */}
+                        <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section
                 data-aos="fade-right"
-                className="py-20 px-6 bg-white"
+                className="pt-6 pb-6 pl-6 pr-6 bg-white"
             >
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-6 text-gray-800">
@@ -134,7 +166,7 @@ export default function Home() {
             {/* ================= POSTER ================= */}
             <section
                 data-aos="zoom-in-up"
-                className="py-16 px-6 md:px-0 flex justify-center bg-gray-50"
+                className="pt-6 pb-10 pl-6 pr-6 md:px-0 flex justify-center bg-gray-50"
             >
                 <img
                     src={Poster}
@@ -142,37 +174,6 @@ export default function Home() {
                     className="w-full max-w-md rounded-xl shadow-xl hover:scale-105 transition duration-500"
                 />
             </section>
-
-            {/* ================= CTA STRIP ================= */}
-            {/* <section
-                data-aos="fade-up"
-                className="py-16 bg-white border-t"
-            >
-                <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
-
-                    <div>
-                        <h3 className="text-3xl font-bold text-gray-800 mb-4">
-                            अधिक जाणून घ्या
-                        </h3>
-
-                        <p className="text-gray-600">
-                            युएसओ वारकरी गुरुकुल आणि कार्यक्रमांमध्ये सहभागी होऊन आध्यात्मिक प्रगती करा.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-end">
-
-                        <button className="px-6 py-3 bg-green-500 text-white rounded-xl shadow hover:scale-105 hover:bg-green-600 transition">
-                            गुरुकुल माहिती →
-                        </button>
-
-                        <button className="px-6 py-3 bg-blue-500 text-white rounded-xl shadow hover:scale-105 hover:bg-blue-600 transition">
-                            कार्यक्रम →
-                        </button>
-
-                    </div>
-                </div>
-            </section> */}
 
             {/* ================= GALLERY ================= */}
             <section className="bg-black text-white py-20 px-6">

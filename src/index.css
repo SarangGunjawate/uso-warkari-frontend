@@ -25,3 +25,19 @@
 .animate-kenburns {
   animation: kenburns 6s ease-in-out forwards;
 }
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom {
+  animation: zoomInOut 8s ease-in-out infinite;
+}
