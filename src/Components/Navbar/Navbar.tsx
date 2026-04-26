@@ -73,7 +73,7 @@ export default function Navbar() {
                     </NavLink>
 
                     <NavLink
-                        to="/granthved"
+                        to="/pustak-prakashan"
                         onClick={() => setIsOpen(false)}
                         className={({ isActive }) =>
                             `block px-4 py-2 rounded-lg transition-all duration-300 font-medium ${isActive
