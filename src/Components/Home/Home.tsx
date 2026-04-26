@@ -90,7 +90,7 @@ export default function Home() {
                             }`} />
                 ))}
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-linear-to-b "></div>
+                <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/40 to-black/40"></div>
 
                 {/* Content */}
                 <div className="relative z-10 max-w-3xl">
