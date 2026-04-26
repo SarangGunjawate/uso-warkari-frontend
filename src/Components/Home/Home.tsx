@@ -86,8 +86,11 @@ export default function Home() {
                         key={index}
                         src={img}
                         alt="Vitthal"
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === current ? "opacity-100 animate-kenburns" : "opacity-0"
-                            }`} />
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 
+                            ${index === current ? "opacity-100 animate-kenburns" : "opacity-0"}
+                            object-center md:object-center`
+                        }
+                    />
                 ))}
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/40 to-black/40"></div>
