@@ -8,6 +8,7 @@ import Img2 from "../../assets/Images/img2.jpeg";
 import Img3 from "../../assets/Images/img3.jpeg";
 import VitthalImg from "../../assets/Images/vitthal-img.jpg";
 import VitthalImg1 from "../../assets/Images/vitthal-img-1.jpg";
+import PageMeta from "../PageMeta";
 
 export default function Home() {
     useEffect(() => {
@@ -20,6 +21,10 @@ export default function Home() {
 
     return (
         <div className="w-full overflow-hidden">
+            <PageMeta
+                title="Home Page"
+                description="View and manage home information."
+            />
 
             {/* ================= HERO ================= */}
             <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden pt-20">

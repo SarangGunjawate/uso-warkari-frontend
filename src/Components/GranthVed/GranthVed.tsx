@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import PosterImage from "../../assets/Images/uso-book.jpeg";
+import PageMeta from "../PageMeta";
 
 const GranthVed = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -113,6 +114,10 @@ const GranthVed = () => {
 
     return (
         <div className="bg-black text-[#FFFFF0] font-serif overflow-x-hidden">
+            <PageMeta
+                title="Pustak Prakashan"
+                description="Pustak Prakashan."
+            />
 
             {/* Background */}
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#000_100%)] -z-10"></div>
