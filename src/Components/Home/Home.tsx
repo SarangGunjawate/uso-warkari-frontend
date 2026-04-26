@@ -6,13 +6,8 @@ import Poster from "../../assets/Images/poster-img.jpeg";
 import Img1 from "../../assets/Images/img1.jpeg";
 import Img2 from "../../assets/Images/img2.jpeg";
 import Img3 from "../../assets/Images/img3.jpeg";
-
-import {
-    FaFacebookF,
-    FaInstagram,
-    FaYoutube,
-    FaWhatsapp,
-} from "react-icons/fa";
+import VitthalImg from "../../assets/Images/vitthal-img.jpg";
+import VitthalImg1 from "../../assets/Images/vitthal-img-1.jpg";
 
 export default function Home() {
     useEffect(() => {
@@ -24,48 +19,51 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden pt-20">
+        <div className="w-full overflow-hidden">
 
             {/* ================= HERO ================= */}
-            <section className="min-h-screen flex flex-col items-center justify-center text-center bg-linear-to-br px-6">
+            <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden pt-20">
 
-                <h1
-                    data-aos="zoom-in"
-                    className="text-5xl md:text-7xl font-bold text-gray-700"
-                >
-                    युएसओ वारकरी
-                </h1>
+                {/* Background */}
+                <picture>
+                    <source media="(max-width: 768px)" srcSet={VitthalImg1} />
+                    <img
+                        src={VitthalImg}
+                        alt="Vitthal"
+                        className="absolute inset-0 w-full h-full object-cover scale-105"
+                    />
+                </picture>
 
-                <p
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                    className="mt-4 text-2xl text-gray-500"
-                >
-                    श्री विठ्ठल भक्ती
-                </p>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/50 to-black/80"></div>
 
-                <button
-                    data-aos="flip-up"
-                    data-aos-delay="400"
-                    className="mt-8 px-8 py-3 bg-orange-500 text-white rounded-full shadow-lg hover:scale-105 hover:bg-orange-600 transition"
-                >
-                    आमच्याबद्दल
-                </button>
+                {/* Content */}
+                <div className="relative z-10 max-w-3xl">
+                    <h1
+                        data-aos="zoom-in"
+                        className="text-4xl md:text-7xl font-bold text-white leading-tight drop-shadow-xl"
+                    >
+                        युएसओ वारकरी
+                    </h1>
 
-                {/* CTA */}
-                <div
-                    data-aos="fade-up"
-                    data-aos-delay="600"
-                    className="mt-12"
-                >
-                    <h2 className="text-2xl font-semibold">
-                        फक्त वारकरी गुरुकुलम
-                    </h2>
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        className="mt-4 text-lg md:text-2xl text-gray-200"
+                    >
+                        श्री विठ्ठल भक्ती
+                    </p>
 
-                    <button className="mt-4 px-6 py-3 bg-yellow-400 rounded-full shadow hover:bg-yellow-500 hover:scale-105 transition">
-                        📩 गुरुकुलम प्रवेश अर्ज
-                    </button>
+                    {/* CTA Button */}
+                    {/* <button
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                        className="mt-8 px-8 py-3 bg-linear-to-r from-orange-400 to-yellow-500 text-white rounded-full shadow-lg hover:scale-105 transition"
+                    >
+                        सहभागी व्हा →
+                    </button> */}
                 </div>
+
             </section>
 
             {/* ================= ABOUT ================= */}
@@ -97,13 +95,12 @@ export default function Home() {
             </section>
 
             {/* ================= CTA STRIP ================= */}
-            <section
+            {/* <section
                 data-aos="fade-up"
                 className="py-16 bg-white border-t"
             >
                 <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
 
-                    {/* Left Content */}
                     <div>
                         <h3 className="text-3xl font-bold text-gray-800 mb-4">
                             अधिक जाणून घ्या
@@ -114,7 +111,6 @@ export default function Home() {
                         </p>
                     </div>
 
-                    {/* Right Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-end">
 
                         <button className="px-6 py-3 bg-green-500 text-white rounded-xl shadow hover:scale-105 hover:bg-green-600 transition">
@@ -127,7 +123,7 @@ export default function Home() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ================= GALLERY ================= */}
             <section className="bg-black text-white py-20 px-6">
@@ -199,57 +195,6 @@ export default function Home() {
                 </div>
 
             </section>
-
-            {/* ================= FOOTER ================= */}
-            <footer className="relative bg-black text-white overflow-hidden">
-
-                {/* Glow */}
-                <div className="absolute inset-0 bg-linear-to-r from-purple-900/30 via-pink-900/20 to-orange-900/30 blur-3xl opacity-60"></div>
-
-                <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
-
-                    <h2
-                        data-aos="zoom-in"
-                        className="text-2xl md:text-3xl font-bold mb-4"
-                    >
-                        युएसओ वारकरी
-                    </h2>
-
-                    <p
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                        className="text-gray-400 mb-8"
-                    >
-                        आम्हाला सोशल मीडियावर फॉलो करा
-                    </p>
-
-                    <div className="flex justify-center gap-8 mb-10">
-
-                        <a data-aos="zoom-in" data-aos-delay="300" className="p-4 rounded-full bg-white/10 hover:bg-blue-600 transition">
-                            <FaFacebookF />
-                        </a>
-
-                        <a data-aos="zoom-in" data-aos-delay="400" className="p-4 rounded-full bg-white/10 hover:bg-pink-500 transition">
-                            <FaInstagram />
-                        </a>
-
-                        <a data-aos="zoom-in" data-aos-delay="500" className="p-4 rounded-full bg-white/10 hover:bg-red-500 transition">
-                            <FaYoutube />
-                        </a>
-
-                    </div>
-
-                    <p className="text-sm text-gray-500">
-                        © २०२५ युएसओ वारकरी • सर्व हक्क राखीव
-                    </p>
-                </div>
-
-                {/* WhatsApp */}
-                <a className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg animate-bounce">
-                    <FaWhatsapp className="text-white text-xl" />
-                </a>
-
-            </footer>
         </div>
     );
 }
