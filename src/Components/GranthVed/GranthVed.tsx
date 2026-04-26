@@ -213,7 +213,7 @@ const GranthVed = () => {
                             data-aos-delay="200"
                             className="mt-4 text-gray-400 italic text-lg"
                         >
-                            खास तुमच्या चिमुरड्यांसाठी – प्रेम, धाडस आणि भक्तीची कहाणी
+                            खास तुमच्या चिमुरड्यांसाठी – प्रेम, धाडस आणि भक्तीच्या गोष्टी
                         </p>
                     </div>
 
@@ -231,7 +231,7 @@ const GranthVed = () => {
                                 <h3 className="text-xl text-[#D4AF37] mb-2">✨ सुरुवात</h3>
                                 <p className="text-gray-300 leading-relaxed">
                                     खूप वर्षांपूर्वी, ज्ञानाच्या गोष्टी कठीण होत्या…
-                                    पण <span className="text-white font-semibold">ज्ञानेश्वर माऊलींनी</span>
+                                    पण <span className="text-white font-semibold">ज्ञानेश्वर माऊलींनी </span>
                                     त्या अगदी सोप्या करून आपल्या मराठीत सांगितल्या.
                                 </p>
                             </div>
