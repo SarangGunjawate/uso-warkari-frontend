@@ -144,7 +144,7 @@ const GranthVed = () => {
 
                     <p
                         data-aos="fade-down"
-                        className="text-[#D4AF37] tracking-[5px] uppercase text-sm md:text-base"
+                        className="text-[#D4AF37] uppercase text-sm md:text-base"
                     >
                         🚩॥ राम कृष्ण हरी ॥🚩
                     </p>
