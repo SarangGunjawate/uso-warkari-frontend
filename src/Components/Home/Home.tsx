@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Poster from "../../assets/Images/poster-img.jpeg";
+import VarkariImg from "../../assets/Images/varkari_img.jpeg";
 import Img1 from "../../assets/Images/img1.jpeg";
 import Img2 from "../../assets/Images/img2.jpeg";
 import Img3 from "../../assets/Images/img3.jpeg";
@@ -130,19 +131,18 @@ export default function Home() {
 
                     {/* Text */}
                     <p className="text-gray-600 text-lg leading-8 border-l-4 text-justify border-orange-400 pl-5 max-w-3xl">
-                        आपल्या मुला-मुलींना आपल्या समृद्ध संस्कृतीची आणि ज्ञानेश्वर माऊलींच्या विचारांची ओळख करून देणारे नवीन पुस्तक लवकरच आपल्या साठी उपलब्ध होत आहे.  अधिक माहितीसाठी खाली दिलेल्या फोटो वर क्लिक करा
+                        आपल्या मुला-मुलींना आपल्या समृद्ध संस्कृतीची आणि ज्ञानेश्वर माऊलींच्या विचारांची ओळख करून देणारे नवीन पुस्तक लवकरच आपल्या साठी उपलब्ध होत आहे.  अधिक माहितीसाठी खाली दिलेल्या फोटो वर क्लिक करा.
                     </p>
 
                     {/* Image Wrapper */}
-                    <div className="relative w-full max-w-md overflow-hidden rounded-2xl">
+                    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-2xl">
                         <img
-                            src={Poster}
+                            src={VarkariImg}
                             alt="poster"
-                            className="w-full h-full animate-zoom"
+                            className="w-full h-auto object-cover animate-zoom"
                         />
 
-                        {/* Optional Overlay Glow */}
-                        <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
 
                 </div>

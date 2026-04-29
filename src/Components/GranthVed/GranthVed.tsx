@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import PosterImage from "../../assets/Images/uso-book.jpeg";
+import ArtboardImage from "../../assets/Images/Artboard 1.jpg.jpeg";
 import PageMeta from "../PageMeta";
 
 const GranthVed = () => {
@@ -172,7 +172,7 @@ const GranthVed = () => {
                         <div className="absolute inset-0 bg-[conic-gradient(transparent,#D4AF37,transparent)] animate-spin-slow"></div>
 
                         <div className="absolute bg-white inset-1 rounded-xl flex flex-col items-center justify-center">
-                            <img src={PosterImage} alt="Book" className="w-[80%]" />
+                            <img src={ArtboardImage} alt="Book" className="w-[80%]" />
                             <div className="text-black p-3 text-sm">
                                 भक्ती मार्गाचा आधुनिक वारसा
                             </div>
