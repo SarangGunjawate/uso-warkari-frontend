@@ -135,14 +135,15 @@ export default function Home() {
                     </p>
 
                     {/* Image Wrapper */}
-                    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-2xl">
+                    <div className="relative w-full max-w-md overflow-hidden rounded-2xl">
                         <img
                             src={VarkariImg}
                             alt="poster"
-                            className="w-full h-auto object-cover animate-zoom"
+                            className="w-full h-full animate-zoom"
                         />
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        {/* Optional Overlay Glow */}
+                        <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
                     </div>
 
                 </div>
